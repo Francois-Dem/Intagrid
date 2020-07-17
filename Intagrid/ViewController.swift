@@ -106,9 +106,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
 
     private func doShareAction() {
-        print("TEST SHARE")
-        // UIActivityViewController
-        
         //UIView ->UIImage
         let renderer = UIGraphicsImageRenderer(size: shareView.bounds.size)
         let image = renderer.image { ctx in
