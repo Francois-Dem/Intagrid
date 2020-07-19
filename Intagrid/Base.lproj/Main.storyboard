@@ -253,8 +253,6 @@
                     </view>
                     <connections>
                         <outlet property="shareView" destination="MmL-E0-v6M" id="unf-ty-ShP"/>
-                        <outlet property="shareViewCenterX" destination="rtQ-Gu-BmJ" id="St8-Bn-Yex"/>
-                        <outlet property="shareViewCenterY" destination="4uA-fo-osd" id="FqZ-AE-kYc"/>
                         <outlet property="view2" destination="5mM-jr-Puo" id="N8D-jc-Ktc"/>
                         <outlet property="view4" destination="U14-jv-N7N" id="7Gg-hv-Iro"/>
                     </connections>
