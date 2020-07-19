@@ -118,10 +118,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }) { (_) in
             let ac = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             ac.popoverPresentationController?.sourceView = self.shareView
-            let completionHandler: UIActivityViewController.CompletionHandler = { _,_  in
+            ac.completionWithItemsHandler = { activity, success, items, error in
                 self.shareView.transform = .identity
             }
-            ac.completionHandler = completionHandler
             self.present(ac, animated: true)
         }
     }
