@@ -10,9 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    @IBOutlet weak var shareViewCenterY: NSLayoutConstraint!
-    @IBOutlet weak var shareViewCenterX: NSLayoutConstraint!
-    
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view4: UIView!
     @IBOutlet weak var shareView: UIView!
@@ -41,7 +38,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     private func setOrientation() {
-        // Use statusBarOrientation because ..
         gesture?.direction = UIApplication.shared.statusBarOrientation.isLandscape ? .left : .up
     }
 
@@ -63,7 +59,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         view4.isHidden = sender.tag == 2
     }
     
-    // début vérification que toutes les view sont renseignées
+    // Start check if all views is not empty
     private func showAlert() {
         let alert = UIAlertController(title: "Erreur", message: "Tous les boutons ne sont pas renseignés", preferredStyle: .alert)
         
@@ -88,7 +84,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 
         if compareImages(image1: plusImg, isEqualTo: img) {
             showAlert()
-            return false // si l'image du bouton est + alors false
+            return false // if button image is + it's false
         }
         
         return true
@@ -102,7 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
         doShareAction()
     }
-    // fin vérification
+    // End checking views
     
 
     private func doShareAction() {
